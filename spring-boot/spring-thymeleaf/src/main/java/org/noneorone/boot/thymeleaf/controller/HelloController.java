@@ -1,4 +1,4 @@
-package org.noneorone.sab.controller;
+package org.noneorone.boot.thymeleaf.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

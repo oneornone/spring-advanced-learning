@@ -3,4 +3,4 @@
 spring advanced leaning notes
 
 ## projects
-- [ ] [spring-advanced-boot](spring-advanced-boot/README.md)
+- [ ] [spring-boot](spring-boot/README.md)
