@@ -5,7 +5,7 @@
     <title>Thymeleaf</title>
 </head>
 <body>
-main
-    <span th:text="|welcome to thymeleaf, |"></span>
+<!--/*@thymesVar id="account" type="java.lang.String"*/-->
+<span th:text="|welcome to thymeleaf, ${user.account}|"></span>
 </body>
 </html>

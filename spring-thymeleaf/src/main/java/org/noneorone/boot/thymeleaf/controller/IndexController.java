@@ -8,9 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class IndexController {
 
     @RequestMapping("/index")
-    public ModelAndView index(ModelAndView mv) {
-        mv.setViewName("redirect:/main");
-        return mv;
+    public String index() {
+        return "login/login";
     }
 
 }

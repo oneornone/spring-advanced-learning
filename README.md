@@ -1,6 +1,7 @@
-# spring-advanced-learning
+# spring-learning
 
-spring advanced leaning notes
+spring leaning notes
 
-## projects
-- [ ] [spring-boot](spring-boot/README.md)
+## modules
+- [ ] [spring-dependencies](spring-dependencies/README.md)
+- [ ] [spring-thymeleaf](spring-thymeleaf/README.md)
