@@ -4,7 +4,7 @@ server:
 spring:
   # thymeleaf start
   thymeleaf:
-    prefix: classpath:/templates/html/
+    prefix: classpath:/templates/
     suffix: .html
     mode: HTML5
     encoding: UTF-8

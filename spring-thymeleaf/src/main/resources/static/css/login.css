@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin: 1em;
+  padding: 1em;
+  border: .1em solid #eee;
+  border-radius: 1.5em;
+}
+
+input[type="text"] {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input[type="text"]:focus {
+  outline: 1px;
+  border: .1em solid #4772fc;
+}
+
+input[type="password"] {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input[type="password"]:focus {
+  outline: 1px;
+  border: .1em solid #4772fc;
+}
+
+input[type="button"] {
+  opacity: 1;
+  color: #fff;
+  font-weight: bold;
+  background-color: #4772fc;
+  border: 1px solid #4772fc;
+}
+
+input[type="button"]:hover {
+  opacity: 0.8;
+}
+
+input[type="button"]:active, input[type="button"].active {
+  opacity: 1;
+  border-color: #166ba5;
+  background-color: #166ba5;
+}
+
+input[type="button"][disabled], input[type="button"].disabled {
+  opacity: 1;
+  color: #ccc;
+  border: 1px solid #f3f4f8;
+  background-color: hsla(0, 0%, 94.9%, .05);
+}
