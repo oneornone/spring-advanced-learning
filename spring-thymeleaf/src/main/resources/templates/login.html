@@ -9,11 +9,11 @@
 </head>
 <body>
 <form class="container" action="#" th:action="@{/login/form}" th:object="${user}" method="post">
-    <input class="item" id="account" name="account" th:field="*{account}" type="text" placeholder="your account"
+    <input class="item text" id="account" name="account" th:field="*{account}" type="text" placeholder="your account"
            maxlength="20">
-    <input class="item" id="pwd" name="pwd" th:field="*{pwd}" type="password" placeholder="password for account"
+    <input class="item text" id="pwd" name="pwd" th:field="*{pwd}" type="password" placeholder="password for account"
            maxlength="16">
-    <input class="item" id="btn_ok" type="submit" value="Login">
+    <input class="item button" id="btn_ok" th:type="|submit|" value="Login">
 </form>
 </body>
 </html>
