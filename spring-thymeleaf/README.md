@@ -14,3 +14,6 @@
   > <!-- html引入 qs 在bootcdn搜索qs -->
   > <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.min.js"></script>
   > ```
+
+## 问题
+* [springMVC+thymeleaf form表单提交前后台数据传递](http://t.zoukankan.com/caotao0918-p-10795225.html)

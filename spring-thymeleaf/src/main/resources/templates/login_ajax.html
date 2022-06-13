@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<base th:href="@{/}"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.min.js"></script>
+    <script src="js/login.js" type="text/javascript"></script>
+    <link href="css/login.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <input class="item" id="account" name="account" type="text" placeholder="your account" maxlength="20">
+    <input class="item" id="pwd" name="pwd" type="password" placeholder="password for account" maxlength="16">
+    <input class="item" id="btn_ok" type="button" value="Login" onclick="doLogin()">
+</div>
+</body>
+</html>

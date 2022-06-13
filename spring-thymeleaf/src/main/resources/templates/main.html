@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Thymeleaf</title>
+    <title>Main Page</title>
 </head>
 <body>
 <!--/*@thymesVar id="account" type="java.lang.String"*/-->
-<span th:text="|welcome to thymeleaf, ${user.account}|"></span>
+<span th:text="|welcome to thymeleaf, ${user.account} &lt${user.sid}&gt|"></span>
 </body>
 </html>
