@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<base th:href="@{/}">
+<head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<th:block th:if="${success}">
+    file uploaded success! you can <a th:href="|@{/user/download}?fileName=${fileName}|">download</a> now.
+</th:block>
+<th:block th:if="${!success}">
+    file uploaded failed: <span th:text="|${error}|"></span>.
+</th:block>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<base th:href="@{/}">
+<head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+</head>
+<body>
+<!--
+注意此处要设置编码类型，且必须为multipart/form-data，
+默认只能上传不超过1MB的文件，也可以通过改配置来调整文件大小的阈值
+(The field file exceeds its maximum permitted size of 1048576 bytes.)
+-->
+<form action="/user/upload" enctype="multipart/form-data" method="post">
+    <p><input type="file" name="file" placeholder="please choose file">
+    <p><textarea name="description" placeholder="file description" rows="5" cols="20"></textarea>
+    <p><input type="submit" value="upload">
+</form>
+</body>
+</html>
