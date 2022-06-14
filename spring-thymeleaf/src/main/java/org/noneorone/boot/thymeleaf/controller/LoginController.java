@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
+@RequestMapping("/login")
 public class LoginController {
 
-    @PostMapping("/login/ajax")
+    @PostMapping("/ajax")
     public ModelAndView loginAjax(@RequestParam(value = "account1") String account, @RequestParam(value = "pwd1") String pwd, HttpServletRequest request, HttpSession session) {
         User user = new User(account, pwd);
         ModelAndView mv = new ModelAndView("redirect:/main", "user", user);
@@ -21,7 +22,7 @@ public class LoginController {
         return mv;
     }
 
-    @RequestMapping(value = "/login/form", method = RequestMethod.POST)
+    @RequestMapping(value = "/form", method = {RequestMethod.POST})
     public String loginForm(@ModelAttribute(value = "user") User user, HttpServletRequest request, HttpSession session) {
         if (user.isGuest()) {
             user.setSid(session.getId());
