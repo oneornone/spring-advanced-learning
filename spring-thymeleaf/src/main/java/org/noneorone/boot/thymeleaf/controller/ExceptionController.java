@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/exception")
-public class ExceptionController extends BaseController {
+public class ExceptionController {
 
     @RequestMapping("/index")
     public static String index() {
