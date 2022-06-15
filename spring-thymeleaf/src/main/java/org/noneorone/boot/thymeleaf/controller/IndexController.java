@@ -13,12 +13,12 @@ public class IndexController {
         // 若页面中有th:field="*{account}"需要显示，则需要设置属性值，否则不用设置也可以
         User user = new User();
         model.addAttribute("user", user);
-        return "login";
+        return "login/login";
     }
 
     @RequestMapping("/index/ajax")
     public String indexAjax() {
-        return "login_ajax";
+        return "login/login_ajax";
     }
 
 }
