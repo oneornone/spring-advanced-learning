@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Thymeleaf Error</title>
-    <style type="text/css">
-        span {
-            color: red
-        }
-    </style>
-</head>
-<body>
-    exception occurred in controller：
-    <p><span th:text="|${error}|"></span>.
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Thymeleaf Error</title>
+        <style type="text/css">
+            span {
+                color: red
+            }
+        </style>
+    </head>
+    <body>
+        <p>source: <th:block th:text="|${url}|"></th:block>
+        <p>exception: <span th:text="|${exception}|"></span>
+    </body>
 </html>
