@@ -1,6 +1,8 @@
 package org.noneorone.boot.thymeleaf.controller;
 
 import org.apache.commons.io.FileUtils;
+import org.noneorone.boot.thymeleaf.bean.User;
+import org.noneorone.boot.thymeleaf.service.UserService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +21,9 @@ import java.net.URLEncoder;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @Resource
+    private UserService userService;
 
     @RequestMapping("/info")
     public static String index() {
@@ -69,6 +75,45 @@ public class UserController {
             builder.header("Content-Disposition", "attachment; filename*=UTF-8''" + fileName);
         }
         return builder.body(FileUtils.readFileToByteArray(file));
+    }
+
+    @RequestMapping("/save")
+    public String save(HttpServletRequest request) {
+        User user = new User();
+        user.setLoginName("Tom");
+        user.setUsername("Thomson");
+        user.setSex('M');
+        user.setAge(22);
+        userService.save(user);
+        request.setAttribute("user", user);
+        request.setAttribute("message", "SAVE user success");
+        return "user/crud_result";
+    }
+
+    @RequestMapping("/update")
+    public String update(HttpServletRequest request) {
+        User user = userService.getById(1);
+        userService.update(user);
+        request.setAttribute("user", user);
+        request.setAttribute("message", "UPDATE user success");
+        return "user/crud_result";
+    }
+
+    @RequestMapping("/delete")
+    public String delete(HttpServletRequest request) {
+        User user = userService.getById(1);
+        userService.delete(1);
+        request.setAttribute("user", user);
+        request.setAttribute("message", "DELETE user success");
+        return "user/crud_result";
+    }
+
+    @RequestMapping("getAll")
+    public String getAll(HttpServletRequest request) {
+        Iterable<User> users = userService.getAll();
+        request.setAttribute("users", users);
+        request.setAttribute("message", "GET_ALL users success");
+        return "user/crud_result";
     }
 
 }

@@ -13,9 +13,40 @@ spring:
     # 开发时关闭缓存，不然没法看到实时页面
     cache: false
   # thymeleaf end
+
   # multipart start
   servlet:
     multipart:
       max-file-size: 50MB
       max-request-size: 50MB
   # multipart end
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/springdatajpa
+    username: root
+    password: Root@1613!
+    # driver-class-name: com.mysql.jdbc.Driver
+    # 连接池中最大活跃连接数
+    max-active: 20
+    # 连接池最大空闲连接
+    max-idle: 8
+    # 必须保持连接的最小值
+    minimum-idle: 8
+    # 初始建立的连接数量
+    initial-size: 10
+
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      # 指定自动创建|更新|验证数据库表结构等配置，配置成update
+      # 表示如果数据库存在持久化类对应的表就不创建，不存在就创建对应的表
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+
+
