@@ -6,8 +6,8 @@
     <artifactId>spring-mvc</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-<!--    <name>spring-mvc Maven Webapp</name>-->
-<!--    <url>http://maven.apache.org</url>-->
+    <name>spring-mvc Maven Webapp</name>
+    <url>http://maven.apache.org</url>
 
     <dependencies>
         <dependency>
@@ -42,7 +42,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-<!--    <build>-->
-<!--        <finalName>spring-mvc</finalName>-->
-<!--    </build>-->
+    <build>
+        <finalName>spring-mvc</finalName>
+    </build>
 </project>
