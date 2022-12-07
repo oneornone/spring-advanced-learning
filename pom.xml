@@ -11,6 +11,7 @@
     <modules>
         <module>spring-dependencies</module>
         <module>spring-thymeleaf</module>
+        <module>spring-mvc</module>
     </modules>
 
     <properties>
