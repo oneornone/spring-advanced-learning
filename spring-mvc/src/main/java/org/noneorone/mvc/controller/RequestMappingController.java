@@ -8,14 +8,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class RequestMappingController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "index";
-    }
-
     @RequestMapping(value = {"/target", "target2"}, method = RequestMethod.GET)
     public String toTarget() {
-        return "target";
+        return "success";
+    }
+
+    @RequestMapping(
+            value = "/testParamsAndHeaders",
+            params = {"username","password!=123456"},
+            headers = {"Host=localhost:8080"}
+    )
+    public String testParamsAndHeaders(){
+        return "success";
     }
 
     /**
@@ -26,13 +30,13 @@ public class RequestMappingController {
     @RequestMapping("testRest/{id}/{username}")
     public String testRest(@PathVariable("id") String id, @PathVariable("username") String username) {
         System.out.println("id:" + id + ", username:" + username);
-        return "target";
+        return "success";
     }
 
     @RequestMapping("testParams")
     public String testParam(String username, String password) {
         System.out.printf("username: %s, passowrd: %s%n", username, password);
-        return "target";
+        return "success";
     }
 
 }
